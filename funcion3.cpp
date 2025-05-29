@@ -4,14 +4,26 @@ using namespace std;
 // Función principal
 int main() {
     int cantidad;
-	int generarFibonacci(int n);
-	
+    char mostrarSuma;
+    int generarFibonacci(int n);
+
     cout << "Ingrese la cantidad de terminos: ";
     cin >> cantidad;
 
+    if (cantidad < 0) {
+        cout << "Por favor ingrese un número positivo." << endl;
+        return 1;
+    }
+
+// Preguntar si desea mostrar la suma
+    cout << "¿Desea mostrar la suma de la serie? (s/n): ";
+    cin >> mostrarSuma;
+
     int sumaTotal = generarFibonacci(cantidad);
 
-    cout << "Suma total: " << sumaTotal << endl;
+    if (mostrarSuma == 's' || mostrarSuma == 'S') {
+        cout << "Suma total: " << sumaTotal << endl;
+    }
 
     return 0;
 }
