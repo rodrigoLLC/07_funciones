@@ -15,8 +15,15 @@ int esPrimo(int numero) {
 int main() {
     int n;
 
-    cout << "Ingresa un numero positivo: ";
-    cin >> n;
+    do {
+        cout << "Ingresa un numero positivo: ";
+        cin >> n;
+
+        if ( n <= 0 ) {
+
+            cout << " El numero debe de ser positivo. Ingrese un nuevo numero." << endl;
+        }
+    } while ( n <= 0 );
 
     if (esPrimo(n))
         cout << n << " es un numero primo." << endl;
