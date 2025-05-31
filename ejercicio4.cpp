@@ -19,8 +19,14 @@ bool Perfecto ( int n ) {
 int main () {
     int numero;
 
+    do {
     cout << "Ingrese el numero: ";
     cin >> numero;
+
+    if ( numero <= 0 ) {
+        cout << " El numero debe de ser positivo. Ingrese un nuevo numero. " << endl;
+    }
+}while ( numero <= 0 );
 
     if ( Perfecto ( numero ) ) {
         cout << numero << " Es un numero perfecto " << endl;
