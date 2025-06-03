@@ -11,7 +11,13 @@ int factorial(int num) {
 
 int main() {
     int m, n, combinatoria;
+    char respuesta;
 
+    cout << " ¿Desea calcular la combinatoria?(s/n):";
+    cin >> respuesta;
+
+    if (respuesta == 's' || respuesta == 'S') {
+        
     cout << "Ingrese el valor de m: ";
     cin >> m;
     cout << "Ingrese el valor de n: ";
@@ -25,6 +31,12 @@ int main() {
     combinatoria = factorial(m) / (factorial(n) * factorial(m - n));
 
     cout << "El resultado de la combinatoria C( " << m << " , " << n << " ) es: " << combinatoria << endl;
+
+    } else {
+        cout << " Cancelaste la operacion. " << endl;
+        cout << " Que tengas un buen dia. " << endl;
+
+    }
 
     return 0;
 }
