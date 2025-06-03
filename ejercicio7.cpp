@@ -29,8 +29,16 @@ int main () {
     int n;
     double respuesta;
 
-    cout << " Ingrese el valor que tomara n: ";
-    cin >> n;
+    do{
+
+        cout << " Ingrese el valor de n: ";
+        cin >> n;
+
+        if ( n <= 0 ) {
+            cout << " Ingrese un valor mayor que 0. Intentelo de nuevo: " << endl;
+        }
+        
+    } while ( n <= 0 ) ;
 
     respuesta = suma ( n );
 
